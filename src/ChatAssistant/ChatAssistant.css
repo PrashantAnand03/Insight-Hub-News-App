@@ -1,0 +1,281 @@
+.chatbot {
+    position: fixed;
+    bottom: 0;
+    right:0;
+    margin-right:20px;
+    margin-bottom: 40px;
+}
+
+.react-chatbot-kit-chat-input {
+  outline:none;
+}
+
+.react-chatbot-kit-chat-inner-container {
+  background-color: rgb(76, 96, 128);
+}
+
+.react-chatbot-kit-chat-container {
+  width: 400px;
+  height: 500px;
+}
+
+.react-chatbot-kit-chat-bot-message {
+  margin-left: 10px;
+}
+
+.react-chatbot-kit-chat-header {
+  background-color: rgb(153, 189, 230);
+}
+
+.react-chatbot-kit-chat-bot-message {
+  background-color: #2977f5;
+}
+
+.react-chatbot-kit-chat-bot-message-arrow {
+  border-right: 8px solid #478dea;
+}
+
+.react-chatbot-kit-chat-btn-send {
+  background-color: #105e05;
+  height:45px;
+}
+
+.Logo{
+  height:50px;
+  width:50px;
+  border-radius: 50px;
+  right:12px;
+}
+
+.Avatar{
+  height:50px;
+  width:50px;
+  border-radius: 50px;
+}
+
+.userAvatar{
+  height:50px;
+  width:50px;
+  border-radius:50px;
+}
+
+
+
+/* Container for the chatbot button */
+.chatbot-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Chatbot button with circle styling */
+.chatbot-button {
+  background-color: rgb(12, 1, 1); /* Green background for the button  color-Green- #105e05*/
+  height: 60px; /* Adjust as needed */
+  width: 60px; /* Adjust as needed */
+  border-radius: 50%; /* Makes it a circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #007bff; /* Blue border */
+  cursor: pointer; /* Pointer cursor on hover */
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+/* Chatbot button hover effect */
+.chatbot-button:hover {
+  background-color: #007bff; /* Change background on hover */
+  border: 2px solid rgb(12, 1, 1);
+}
+
+/* Chatbot icon styling */
+.chatbot-icon {
+  height: 50px; /* Adjust as needed */
+  width: 50px; /* Adjust as needed */
+  border-radius: 50%; /* Ensures icon is centered and circular */
+  animation: bounce 1s infinite; /* Bounce effect */
+}
+
+/* Keyframes for bounce animation */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Chatbot container styling */
+.react-chatbot-kit-chat-container {
+  width: 400px;
+  height: 500px;
+}
+
+
+
+/* chatbot for mobile screen */
+
+/* Mobile Screen Adjustments */
+@media (max-width: 600px) {
+  /* Adjust the chatbot container */
+  .react-chatbot-kit-chat-container {
+    width: 100%; /* Full width on small screens */
+    max-width: 350px; /* Limit the width */
+    height: 60vh; /* Adjust height for better fit */
+    max-height: 80vh; /* Maximum height to fit the screen */
+    position: fixed; /* Ensure it stays in place */
+    bottom: 0; /* Align to the bottom */
+    right: 0; /* Align to the right */
+  }
+
+  /* Ensure the close button is visible on mobile */
+  .chatbot-close-button {
+    .chatbot-button{
+      background-color: 2px solid rgb(12, 1, 1);
+    }
+    .chatbot-button:hover {
+      background-color: #007bff; /* Change background on hover */
+      border: 2px solid rgb(12, 1, 1);
+    }
+    
+    display: flex; /* Show the close button */
+    top: 10px; /* Position from the top */
+    right: 10px; /* Position from the right */
+  }
+
+}
+
+
+
+
+
+
+/* Existing styles for chat assistant */
+
+/* Chatbot container */
+.chatbot-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-right: 20px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Chatbot button */
+.chatbot-button {
+  background-color: rgb(12, 1, 1);
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #007bff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.chatbot-button:hover {
+  background-color: #007bff;
+  border: 2px solid rgb(12, 1, 1);
+}
+
+/* Chatbot icon styling */
+.chatbot-icon {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  animation: bounce 1s infinite;
+}
+
+/* Keyframes for bounce animation */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+
+/* Close button styling */
+.chatbot-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff4d4d;
+  border: none;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+  z-index: 10;
+  display: none; /* Hidden by default */
+}
+/* Responsive styles for mobile screens */
+@media (max-width: 600px) {
+  .chatbot-container.open {
+    bottom: auto;
+    top: 0; /* Position the chatbot at the top */
+  }
+
+  
+
+  .react-chatbot-kit-chat-container {
+    width: 100%;
+    max-width: 300px;
+    height: 80vh;
+    max-height: -70vh;
+    position: relative;
+    top: 0; /* Ensure it stays at the top */
+  }
+
+  .react-chatbot-kit-chat-bot-message {
+    font-size: 14px;
+  }
+
+  .react-chatbot-kit-chat-input {
+    font-size: 14px;
+  }
+  .chatbot-button {
+    background-color: rgb(12, 1, 1);
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #007bff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 30px;
+  }
+  
+}
+
+
+
+

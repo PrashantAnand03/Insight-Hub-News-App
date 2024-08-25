@@ -1,0 +1,196 @@
+/* General Styles for About Page */
+.about-page {
+    padding: 20px;
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif; /* Professional font family */
+}
+
+.about-page h2 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 20px;
+    text-align: center; /* Center align heading */
+}
+
+.about-page p {
+    font-size: 1.125rem;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify; /* Justify text for a professional look */
+}
+
+/* Section Styles */
+.row {
+    margin-bottom: 30px;
+}
+
+.col-lg-6 {
+    padding: 15px;
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    justify-content: center;
+}
+
+/* Card Styling */
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%; /* Default full width for small screens */
+    max-width: 400px; /* Maximum width for larger screens */
+    text-align: center; /* Center align text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box; /* Ensure padding does not affect width */
+}
+
+/* Card Title */
+.card h3 {
+    font-size: 1.75rem;
+    color: #007bff;
+    margin-bottom: 15px;
+    text-align: center; /* Center align title */
+}
+
+/* Card Content */
+.card p {
+    font-size: 1.125rem;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify; /* Justify text for a professional look */
+}
+
+/* Image Styling */
+.img-fluid {
+    border-radius: 8px;
+}
+
+/* Jumbotron Section */
+.jumbotron {
+    background-color: #000;
+    color: #fff;
+    border-radius: 8px;
+    padding: 40px;
+    margin-top: 20px;
+    text-align: center; /* Center text */
+}
+
+.jumbotron h2 {
+    font-size: 2.5rem;
+    color: #007bff;
+}
+
+/* Badge Styles */
+.badge-category {
+    background-color: #007bff; /* Customize color */
+    color: #fff;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    display: inline-block;
+}
+
+/* Star Rating Styles */
+.rating-stars {
+    font-size: 1.5rem; /* Adjust size as needed */
+    display: flex;
+    justify-content: center;
+}
+
+.rating-stars i {
+    color: #ffd700; /* Yellow color for stars */
+    -webkit-text-stroke: 1px #000; /* Black outline */
+    text-shadow: 1px 1px 0 #000; /* Black shadow */
+    margin: 0 0.1rem; /* Space between stars */
+}
+
+/* Reviews Section */
+.reviews-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.review-scroll-container {
+    display: flex;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    gap: 1rem; /* Space between reviews */
+    padding: 1rem 0;
+    scroll-behavior: smooth;
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+.review-scroll-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in WebKit browsers */
+}
+
+.review-item {
+    min-width: 300px;
+    flex: 0 0 auto;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center align text */
+    transition: transform 0.3s ease; /* Smooth transformation on hover */
+}
+
+.review-item:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover for emphasis */
+}
+
+.review-item img {
+    width: 70px; /* Increase width */
+    height: 70px; /* Increase height */
+    border-radius: 50%; /* Circular image */
+    margin-bottom: 1rem; /* Space between image and text */
+}
+
+.review-item p {
+    font-size: 1rem;
+    color: #333;
+    margin: 0.5rem 0;
+    text-align: justify; /* Justify text for a professional look */
+}
+
+.review-item footer {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.review-item {
+    /* Other existing styles */
+    margin-bottom: 20px; /* Space between review items */
+    padding: 15px; /* Padding for review item */
+    height: 300px; /* Fixed height for each review item */
+    flex-direction: column; /* Align content vertically */
+  }
+  
+  /* Adjust spacing between name and stars */
+  .review-item footer {
+    margin-top: 10px; /* Space above the footer containing the name */
+    margin-bottom: 10px; /* Space below the name */
+    font-size: 1rem; /* Font size for the name */
+    color: #555; /* Color for the name text */
+  }
+  
+  .rating-stars {
+    font-size: 1.5rem; /* Adjust size of stars as needed */
+    color: #ffd700; /* Yellow color for stars */
+    display: flex; /* Flexbox for horizontal alignment */
+    justify-content: center; /* Center align stars */
+  }
+  
+  .rating-stars i {
+    margin: 0 0.1rem; /* Space between stars */
+  }
+  

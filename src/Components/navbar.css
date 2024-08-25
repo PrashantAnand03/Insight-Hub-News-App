@@ -1,0 +1,129 @@
+/* General navbar styles */
+.navbar {
+    padding: 0.5rem 1rem;
+  }
+  
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+  
+  .nav-link {
+    font-size: 1rem;
+  }
+  
+  /* Dark mode button alignment and styling */
+  .btn-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 375px) {
+    .navbar-nav {
+      text-align: center;
+      margin-top: 1rem; /* Margin adjustment for spacing */
+    }
+  
+    .nav-link {
+      font-size: 0.875rem; /* Smaller font size for smaller screens */
+    }
+  
+    .btn-toggle {
+      font-size: 0.75rem; /* Adjust font size for toggle button */
+    }
+  
+    .form-control,
+    .btn-outline-success {
+      font-size: 0.75rem; /* Adjust font size for search input and button */
+    }
+  }
+  
+  @media (max-width: 414px) {
+    .navbar-nav {
+      text-align: center;
+      margin-top: 1rem; /* Margin adjustment for spacing */
+    }
+  
+    .nav-link {
+      font-size: 0.875rem; /* Adjust font size */
+    }
+  
+    .btn-toggle {
+      font-size: 0.75rem; /* Adjust font size for toggle button */
+    }
+  }
+  
+  @media (max-width: 430px) {
+    .navbar-nav {
+      text-align: center;
+      margin-top: 1rem; /* Margin adjustment for spacing */
+    }
+  
+    .nav-link {
+      font-size: 0.875rem; /* Adjust font size */
+    }
+  
+    .btn-toggle {
+      font-size: 0.75rem; /* Adjust font size for toggle button */
+    }
+  }
+  
+  @media (max-width: 360px) {
+    .navbar-nav {
+      text-align: center;
+      margin-top: 1rem; /* Margin adjustment for spacing */
+    }
+  
+    .nav-link {
+      font-size: 0.75rem; /* Further reduce font size */
+    }
+  
+    .btn-toggle {
+      font-size: 0.75rem; /* Adjust font size for toggle button */
+    }
+  
+    .form-control,
+    .btn-outline-success {
+      font-size: 0.75rem; /* Adjust font size for search input and button */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .navbar-nav {
+      margin-left: auto; /* Center align nav items on larger screens */
+    }
+  
+    .nav-link {
+      font-size: 1rem; /* Default font size for laptops and larger screens */
+    }
+  
+    .btn-toggle {
+      font-size: 1rem; /* Default font size for toggle button */
+    }
+  
+    .form-control,
+    .btn-outline-success {
+      font-size: 1rem; /* Default font size for search input and button */
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .navbar-nav {
+      margin-left: auto; /* Ensure alignment on larger screens */
+    }
+  
+    .nav-link {
+      font-size: 1rem; /* Default font size */
+    }
+  
+    .btn-toggle {
+      font-size: 1rem; /* Default font size */
+    }
+  
+    .form-control,
+    .btn-outline-success {
+      font-size: 1rem; /* Default font size */
+    }
+  }
+  

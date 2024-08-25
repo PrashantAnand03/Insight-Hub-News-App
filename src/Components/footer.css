@@ -1,0 +1,84 @@
+.social-icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  border-radius: 50%;
+  background-color: rgb(12, 1, 1); /* Circle background color */
+  padding: 10px; /* Padding to ensure icon is centered */
+  transition: background-color 0.3s;
+  border: 2px solid #007bff; /* Optional: border to match icon color */
+}
+
+/* Hover effect css on Social icons */
+.social-icon-circle:hover {
+  background-color: #007bff9a; /* Change background color on hover  color-- #ff9900 color--#007bff9a */
+  border: 2px solid rgb(12, 1, 1);
+}
+
+.social-icon-circle .fa {
+  color: #007bff; /* Icon color (blue) */
+}
+
+/* Font css on Social */
+.follow-fnt {
+  font-family: 'Roboto', sans-serif; /*  font family */
+  color: white; /*  color */
+  font-size: 1.2rem; /* Adjust size  */
+  font-weight: bold; /*  text bold emphasis */
+}
+
+/* Navigation links styling */
+.nav-link {
+  font-family: 'Roboto', sans-serif; /* Font family */
+  font-size: 1rem; /* Font size */
+  color: #ffffff; /* Default text color (white) */
+  transition: color 0.3s, transform 0.3s;
+}
+.nav-link:hover {
+  color: #007bff !important; /* Change text color to blue on hover */
+  transform: scale(1.3); /* Increase size on hover */
+  font-weight: bold; /* Optionally make the text bold on hover */
+}
+#newsletter1{
+  border: 2px solid rgb(12, 1, 1);
+}
+.animation{
+  border: 2px solid rgb(12, 1, 1);
+}
+.animation:hover{
+  background-color: #075235e7; /* Change background color on hover  color-- #ff9900 color--#007bff9a */
+  border: 2px solid rgb(12, 1, 1);
+}
+/* CSS heart Emoji */
+.text-heart {
+  font-size: 1.2rem; /* Adjust size */
+  color:yellow; /* Ensure it's red if needed */
+}
+
+/* Footer Menue Responsive  */
+/* Ensure the navigation links stay in one line on smaller screens */
+.nav {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping on small screens */
+}
+
+
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 767.98px) {
+  .nav {
+    justify-content: center; /* Center items horizontally */
+  }
+  .nav-link {
+    padding: 1rem 0.5rem; /* Adjust padding for better fit */
+    font-size: 0.7rem; /* Font size */
+    margin-right: 18px;
+    color: #ffffff; /* Default text color (white) */
+    transition: color 0.3s, transform 0.3s;
+  }
+}
+
+
+

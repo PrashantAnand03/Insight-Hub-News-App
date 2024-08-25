@@ -1,0 +1,50 @@
+/* Ensure the card is responsive and looks good on various screen sizes */
+.cards {
+    max-width: 100%; /* Adjusts the card width to fit the container */
+    margin: 0 auto; /* Center the card horizontally */
+  }
+  
+  .cards-img-top {
+    height: 200px; /* Fixed height for the image */
+    width: 100%; /* Make image width responsive */
+    object-fit: cover; /* Ensure the image covers the area */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 375px) {
+    .cards {
+      margin: 0 auto;
+    }
+  }
+  
+  @media (max-width: 414px) {
+    .cards {
+      margin: 0 auto;
+    }
+  }
+  
+  @media (max-width: 430px) {
+    .cards {
+      margin: 0 auto;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    .cards {
+      margin: 0 auto;
+    }
+  }
+  
+  @media (max-width: 412px) {
+    .cards {
+      margin: 0 auto;
+      padding: 1rem; /* Adjust padding for smaller screens */
+    }
+    
+    .cards-img-top {
+      height: auto; /* Adjust image height for smaller screens */
+      width: 100%;
+    }
+  }
+  
+  
