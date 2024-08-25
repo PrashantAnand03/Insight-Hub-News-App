@@ -1,4 +1,6 @@
 import "./about.css";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css'; // Optional: Import the CSS for the blur effect
 import AboutUs from "../assets/AboutUs.jpeg";
 import Ourmission from "../assets/Ourmission.jpg";
 import Ourstory from "../assets/Ourstory.jpg";
@@ -36,7 +38,7 @@ const About = () => {
           </p>
         </div>
         <div className="col-lg-6">
-          <img
+        <LazyLoadImage
             src={AboutUs}
             className="d-block mx-lg-auto img-fluid"
             alt="News Overview"
@@ -56,7 +58,7 @@ const About = () => {
       {/* Second Section: Our Mission */}
       <div className="row align-items-center g-5 py-5">
         <div className="col-lg-6">
-          <img
+        <LazyLoadImage
             src={Ourmission}
             className="d-block mx-lg-auto img-fluid"
             alt="Our Mission"
@@ -137,7 +139,7 @@ const About = () => {
           </p>
         </div>
         <div className="col-lg-6">
-          <img
+        <LazyLoadImage
             src={Ourstory}
             className="d-block mx-lg-auto img-fluid"
             alt="Our Story"

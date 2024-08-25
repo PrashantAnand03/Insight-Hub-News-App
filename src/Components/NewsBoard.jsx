@@ -4,10 +4,16 @@ import NewsItems from "./NewsItems";
 const NewsBoard = ({ category }) => {
     const [articles, setArticles] = useState([]);
     const [loading, setLoading] = useState(true); // Add a loading state
+    const [error, setError] = useState(null); // Add an error state
 
     useEffect(() => {
         const fetchNews = async () => {
             try {
+                // Ensure that API key is available and correct
+                if (!import.meta.env.VITE_API_KEY) {
+                    throw new Error('API key is missing.');
+                }
+
                 // Define URLs for all API requests
                 const sourcesUrl = `https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=${import.meta.env.VITE_API_KEY}`;
                 const indiUrl = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${import.meta.env.VITE_API_KEY}`;
@@ -46,6 +52,7 @@ const NewsBoard = ({ category }) => {
                 }
             } catch (err) {
                 console.error('Error fetching news:', err);
+                setError('Failed to fetch news. Please try again later.'); // Update error state
                 setArticles([]); // Clear articles on error
             } finally {
                 setLoading(false); // Set loading to false after fetching
@@ -60,6 +67,8 @@ const NewsBoard = ({ category }) => {
             <h2 className="text-center">Latest <span className="badge bg-danger">News</span></h2>
             {loading ? ( // Show loading state if still fetching
                 <p className="text-center">Loading news...</p>
+            ) : error ? ( // Show error message if there is an error
+                <p className="text-center">{error}</p>
             ) : (
                 articles.length > 0 ? (
                     articles.map((news, index) => (
