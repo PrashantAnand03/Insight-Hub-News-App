@@ -116,6 +116,7 @@
 .reviews-container {
     max-width: 800px;
     margin: 0 auto;
+    margin-top: 100px;
     position: relative;
 }
 

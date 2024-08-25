@@ -18,12 +18,10 @@ const App = () => {
     <Router>
       <div className={`app-container ${darkMode ? 'dark-mode' : ''}`}>
         <Navbar setCategory={setCategory} darkMode={darkMode} setDarkMode={setDarkMode} />
-        
         <Routes>
           <Route path="/" element={<NewsBoard category={category} isDarkMode={darkMode} />} />
           <Route path="/about" element={<About />} /> {/* Route for About page */}
         </Routes>
-
         <Footer />
         <ChatAssistant />
       </div>
