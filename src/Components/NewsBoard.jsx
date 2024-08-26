@@ -1,52 +1,63 @@
 import { useEffect, useState } from 'react';
+import axios from 'axios';
+import PropTypes from 'prop-types';
 import NewsItems from './NewsItems';
 
 const NewsBoard = ({ category }) => {
-  const [articles, setArticles] = useState([]);
+  const [news, setNews] = useState([]);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchArticles = async () => {
+    const fetchNews = async () => {
       try {
         const url = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${import.meta.env.VITE_API_KEY}`;
-        console.log(`Fetching URL: ${url}`);
-
-        const response = await fetch(url);
-        if (!response.ok) {
-          // Handle HTTP errors
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-
-        const data = await response.json();
-        console.log('API Response:', data);
-
-        if (data.articles && data.articles.length > 0) {
-          setArticles(data.articles);
+        const response = await axios.get(url);
+        console.log(response.data.articles); // Log the response to verify
+        if (response.data.articles) {
+          setNews(response.data.articles); // Update state with fetched news
         } else {
-          setArticles([]);
+          setNews([]);
         }
-      } catch (error) {
-        console.error('Error fetching articles:', error);
-        setError(error.message);
+      } catch (err) {
+        console.error('Error fetching news:', err);
+        if (err.response) {
+          setError(`HTTP error! Status: ${err.response.status}`);
+        } else if (err.request) {
+          setError('No response received from the server');
+        } else {
+          setError(err.message);
+        }
       }
     };
 
-    fetchArticles();
+    fetchNews();
   }, [category]);
 
   return (
-    <div>
-      <h2 className="text-center">Latest <span className="badge bg-danger">News</span></h2>
-      {error && <div className="alert alert-danger">{error}</div>}
-      {articles.length > 0 ? (
-        articles.map((news, index) => (
-          <NewsItems key={index} title={news.title} description={news.description} src={news.urlToImage} url={news.url} />
-        ))
+    <div className="news-board d-flex flex-wrap">
+      {error ? (
+        <p>{error}</p>
       ) : (
-        <div className="alert alert-info">No articles available.</div>
+        news.length > 0 ? (
+          news.map((item, index) => (
+            <NewsItems
+              key={index}
+              title={item.title}
+              description={item.description}
+              src={item.urlToImage}
+              url={item.url}
+            />
+          ))
+        ) : (
+          <p>No news available</p>
+        )
       )}
     </div>
   );
+};
+
+NewsBoard.propTypes = {
+  category: PropTypes.string.isRequired,
 };
 
 export default NewsBoard;
