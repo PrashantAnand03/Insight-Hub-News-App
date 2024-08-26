@@ -15,7 +15,6 @@ const NewsItems = ({ title, description, src, url }) => {
             />
             <div className="card-body">
                 <h5 className="card-title">{title || "No Title"}</h5>
-                {/* Conditionally render the description only if it's available */}
                 {description && description.trim() ? (
                     <p className="card-text">{description}</p>
                 ) : null}

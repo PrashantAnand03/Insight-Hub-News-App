@@ -3,32 +3,37 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import NewsItems from './NewsItems';
-import { BallTriangle } from 'react-loader-spinner'; // Importing BallTriangle loader
+import { BallTriangle } from 'react-loader-spinner';
 
 const NewsBoard = ({ category }) => {
   const [news, setNews] = useState([]);
   const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true); // State for loading
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const url = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${import.meta.env.VITE_API_KEY}`;
+        const apiKey = import.meta.env.VITE_API_KEY; // Your API key from environment variables
+        const url = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${apiKey}`;
+        const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
+
         console.log(`Fetching URL: ${url}`);
-        
-        const response = await axios.get(url);
-        
+
+        const response = await axios.get(proxyUrl);
+
         console.log('API Response:', response);
-        console.log('Articles:', response.data.articles);
-      
-        if (response.data && response.data.articles) {
-          setNews(response.data.articles); // Update state with fetched news
+        const data = JSON.parse(response.data.contents);
+
+        console.log('Articles:', data.articles);
+
+        if (data && data.articles) {
+          setNews(data.articles); // Update state with fetched news
         } else {
           setNews([]);
         }
       } catch (err) {
         console.error('Error fetching news:', err);
-        
+
         if (err.response) {
           console.error('Error Response:', err.response);
           setError(`HTTP error! Status: ${err.response.status}. Message: ${err.response.data.message}`);
@@ -43,8 +48,7 @@ const NewsBoard = ({ category }) => {
         setLoading(false); // Set loading to false once the data is fetched
       }
     };
-    
-    
+
     fetchNews();
   }, [category]);
 
