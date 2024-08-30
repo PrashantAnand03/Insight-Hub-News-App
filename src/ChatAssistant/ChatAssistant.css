@@ -46,17 +46,8 @@ width: 50px;
 border-radius: 50px;
 }
 
-/* Container for the chatbot button */
-.chatbot-container {
-position: fixed;
-bottom: 0;
-right: 0;
-margin-right: 40px;
-margin-bottom: 40px;
-display: flex;
-align-items: center;
-justify-content: center;
-}
+
+
 
 .chatbot-container {
   position: fixed;
@@ -133,18 +124,27 @@ display: none; /* Hidden by default */
 
 /* Responsive Styles */
 
-/* For screens 375 x 675 */
-/* Responsive Styles for screens 375 x 667 */
-@media (max-width: 375px) and (max-height: 667px) {
-  .react-chatbot-kit-chat-container {
-    width: 100%;
-    max-width: 350px;
-    height: 68vh;
-    max-height: 70vh;
+/* For screens 375 x 667 */
+  @media (max-width: 375px) and (max-height: 667px) {
+    .react-chatbot-kit-chat-container {
+      width: 100%;
+      max-width: 350px;
+      height: 52vh;
+      max-height: 70vh;
+      margin-bottom: -60px;
+    }
+    .react-chatbot-kit-chat-input {
+      margin-bottom: -60px;
+    }
+    .react-chatbot-kit-chat-btn-send{
+      margin-bottom: -80px;
+    }
+    .chatbot-container{
+      margin-bottom: 119px;
+    }
   }
-}
 /* For screens 414 x 896 */
-@media (max-width: 414px) and (max-height: 896px) {
+@media (max-width: 414px) and (max-height: 896px){
 .react-chatbot-kit-chat-container {
   width: 100%;
   max-width: 350px;
@@ -154,11 +154,11 @@ display: none; /* Hidden by default */
 }
 .react-chatbot-kit-chat-input {
   margin-top: auto; /* Ensure input is always at the bottom */
-  margin-bottom: -6px;
+  margin-bottom: -15px;
 }
 .react-chatbot-kit-chat-btn-send{
   margin-top: auto; /* Ensure input is always at the bottom */
-  margin-bottom: -6px;
+  margin-bottom: -15px;
 }
 }
 
@@ -184,11 +184,11 @@ display: none; /* Hidden by default */
 }
 .react-chatbot-kit-chat-input {
   margin-top: auto; /* Ensure input is always at the bottom */
-  margin-bottom: -15.5px;
+  margin-bottom: -25px;
 }
 .react-chatbot-kit-chat-btn-send{
   margin-top: auto; /* Ensure input is always at the bottom */
-  margin-bottom: -15px;
+  margin-bottom: -25px;
 }
 }
 

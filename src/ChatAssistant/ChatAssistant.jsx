@@ -41,16 +41,3 @@ const ChatAssistant = () => {
 
 export default ChatAssistant;
 
-
-
-{/*
-<div className="chatbot">
-  <img className="Logo" src={chatbotLogo} alt="Logo" onClick={toggleChatbot} />
-  {isOpen && 
-    <Chatbot
-      config={config}
-      messageParser={MessageParser}
-      actionProvider={ActionProvider}
-    />}
-</div>
-*/}

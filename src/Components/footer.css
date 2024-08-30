@@ -64,8 +64,6 @@
   flex-wrap: nowrap; /* Prevent wrapping on small screens */
 }
 
-
-
 /* Media query for screens smaller than 768px */
 @media (max-width: 767.98px) {
   .nav {
@@ -79,6 +77,36 @@
     transition: color 0.3s, transform 0.3s;
   }
 }
+
+/* For screens 1280x800 */
+@media (min-width: 1280px) and (max-width: 800px) {
+  .ftr-right {
+    padding-left: 50px;
+  }
+}
+
+/* For screens 1024x600 */
+@media (min-width: 1024px) and (max-width: 600px) {
+  .ftr-right {
+    padding-left: 50px;
+  }
+}
+/* Custom media queries for specific screen sizes */
+@media (min-width: 1280px) and (max-width: 1280px) and (min-height: 800px) and (max-height: 800px),
+       (min-width: 1024px) and (max-width: 1024px) and (min-height: 600px) and (max-height: 600px),
+       (min-width: 1024px) and (max-width: 1366px) and (min-height: 768px) and (max-height: 768px) {
+  .ftr-right {
+    padding-left: 50px;
+  }
+}
+
+/* For typical laptop screens (e.g., 1366x768, 1440x900) */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .ftr-right {
+    padding-left: 50px;
+  }
+}
+
 
 
 

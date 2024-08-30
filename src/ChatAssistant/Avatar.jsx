@@ -1,5 +1,4 @@
 import chatbotLogo from "../assets/chatbotLogo.jpeg"
-import React from 'react'
 import "../ChatAssistant/ChatAssistant.css"
 
 export default function Avatar() {

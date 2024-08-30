@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub, faXTwitter } from '@fortawesome/free-brands-svg-icons';
@@ -19,7 +20,7 @@ const Footer = () => {
           <div className="row">
             {/* Left Side: Insight Hub and Social Links */}
             <div className="col-md-3">
-              <h3><span className="badge bg-warning text-dark fs-4">Insight Hub</span></h3>
+              <h3><span className="badge bg-warning text-dark fs-5">Insight Hub</span></h3>
               <p className='follow-fnt'>Follow us on our socials:</p>
               <div className="d-flex gap-2">
                 <a href="https://www.linkedin.com/in/prashantanand03/" className="text-white social-icon-circle">
@@ -39,17 +40,25 @@ const Footer = () => {
 
             {/* Middle: Navigation Links */}
             <div className="col-md-6">
-            <ul className="nav justify-content-center border-bottom pb-3 mb-3">
-              <li className="nav-item"><a href="http://localhost:5173/?#" className="nav-link px-2 text-white me-4">Home</a></li>
-              <li className="nav-item"><a href="/" className="nav-link px-2 text-white me-4">Newsletter</a></li>
-              <li className="nav-item"><a href="/" className="nav-link px-2 text-white me-4">Pricing</a></li>
-              <li className="nav-item"><a href="/" className="nav-link px-2 text-white me-4">FAQs</a></li>
-              <li className="nav-item"><a href="http://localhost:5173/about" className="nav-link px-2 text-white">About</a></li>
+            <ul className="line-height nav justify-content-center border-bottom pb-1 mb-3">
+              <li className="nav-item"><a href="/" className="nav-link px-2 text-white me-2">Home</a></li>
+              <li className="nav-item">
+                <Link to="/newsletter" className="nav-link px-2 text-white me-2">Newsletter</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/pricing" className="nav-link px-2 text-white me-2">Pricing</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/faqs" className="nav-link px-2 text-white me-2">FAQs</Link>
+              </li>
+              <li className="nav-item">
+                  <Link to="/about" className="nav-link px-2 text-white me-2">About</Link>
+              </li>
             </ul>
             </div>
 
             {/* Right Side: Subscribe Form */}
-            <div className="col-md-3">
+            <div className="ftr-right col-md-3">
               <form>
                 <h5>Subscribe to our newsletter</h5>
                 <p>Monthly digest of what&apos;s new and exciting from us.</p>
