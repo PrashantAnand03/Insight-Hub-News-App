@@ -14,7 +14,7 @@ const NewsBoard = ({ category }) => {
     const fetchNews = async () => {
       try {
         const apiKey = import.meta.env.VITE_API_KEY; // Your API key from environment variables
-        const url = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${apiKey}`;
+        const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${apiKey}`;
         const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
 
         console.log(`Fetching URL: ${url}`);
