@@ -15,33 +15,33 @@ const Navbar = ({ setCategory, darkMode, setDarkMode }) => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 d-flex align-items-center">
             <li className="nav-item">
-              <Link className="nav-Link fs-5 me-4" to="/" onClick={() => setCategory("technology")} style={{ cursor: "pointer" }}>
-                <span className="badge bg-dark">Technology</span>
+              <Link className="nav-link fs-5 me-4" to="/" onClick={() => setCategory("technology")} style={{ cursor: "pointer" }}>
+                <span className="badge bg-dark nav-hov">Technology</span>
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-Link fs-5 me-4" to="/" onClick={() => setCategory("business")} style={{ cursor: "pointer" }}>
-                <span className="badge bg-dark">Business</span>
+              <Link className="nav-link fs-5 me-4" to="/" onClick={() => setCategory("business")} style={{ cursor: "pointer" }}>
+                <span className="badge bg-dark nav-hov">Business</span>
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-Link fs-5 me-4" to="/" onClick={() => setCategory("politics")} style={{ cursor: "pointer" }}>
-                <span className="badge bg-dark">Politics</span>
+              <Link className="nav-link fs-5 me-4" to="/" onClick={() => setCategory("politics")} style={{ cursor: "pointer" }}>
+                <span className="badge bg-dark nav-hov">Politics</span>
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-Link fs-5 me-4" to="/" onClick={() => setCategory("sports")} style={{ cursor: "pointer" }}>
-                <span className="badge bg-dark">Sports</span>
+              <Link className="nav-link fs-5 me-4" to="/" onClick={() => setCategory("sports")} style={{ cursor: "pointer" }}>
+                <span className="badge bg-dark nav-hov">Sports</span>
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-Link fs-5 me-4" to="/" onClick={() => setCategory("health")} style={{ cursor: "pointer" }}>
-                <span className="badge bg-dark">Health</span>
+              <Link className="nav-link fs-5 me-4" to="/" onClick={() => setCategory("health")} style={{ cursor: "pointer" }}>
+                <span className="badge bg-dark nav-hov">Health</span>
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-Link fs-5 me-4" to="/about">
-                <span className="badge bg-dark">About</span>
+              <Link className="nav-link fs-5 me-4" to="/about">
+                <span className="badge bg-dark nav-hov">About</span>
               </Link>
             </li>
           </ul>

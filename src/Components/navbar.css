@@ -10,6 +10,10 @@
   .nav-link {
     font-size: 1rem;
   }
+  .nav-hov:hover{
+    border: 2px solid rgb(12, 1, 1);
+    color:#007bff9a; /* Change background color on hover  color-- #ff9900 color--#007bff9a */
+  }
   
   /* Dark mode button alignment and styling */
   .btn-toggle {
