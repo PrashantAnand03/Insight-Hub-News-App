@@ -8,7 +8,7 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 
-- Project Details
+- Project Details:-
   - **Project Name:** Insight-Hub-News-App web Application.
   - **Tech Stack:** React.js, Axios, React Router, Bootstrap 5, News API, GitHub
   - **Demo Link:** https://insight-hub-green.vercel.app/
